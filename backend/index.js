@@ -2,17 +2,18 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const path = require('path');
+const jwt = require('jsonwebtoken');
 
 const app = express();
-const teachersRouter = require("./routes/teachers");
-
-
+app.use(cors());
+app.use(express.json());
+// const teachersRouter = require("./routes/teachers");
+const clientRouter = require("./routes/client");
 
 
 app.use(bodyParser.json());
-app.use("/teachers", teachersRouter);
-
-
+// app.use("/teachers", teachersRouter);
+app.use("/client",clientRouter)
 
 const PORT = 3000;
 

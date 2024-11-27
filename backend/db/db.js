@@ -26,3 +26,7 @@ const teacherSchema = new mongoose.Schema({
 const User = mongoose.model('User', userSchema);
 const Teacher = mongoose.model('Teacher', teacherSchema);
 
+// ... existing code ...
+
+// Export the models
+module.exports = { User, Teacher };
