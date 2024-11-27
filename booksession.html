@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book My Session</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 20px;
+    }
+    header, footer {
+      background: #333;
+      color: #fff;
+      padding: 10px 0;
+      text-align: center;
+    }
+    nav a {
+      color: #fff;
+      margin: 0 15px;
+      text-decoration: none;
+    }
+    .session-grid {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+    }
+    .session-card {
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      padding: 20px;
+      margin: 10px;
+      width: 30%;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    button {
+      background: #28a745;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+    button:hover {
+      background: #218838;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header Section -->
+  <header>
+    <div class="container">
+      <h1>Book My Session</h1>
+      <nav>
+        <a href="#">Home</a>
+        <a href="#">About Us</a>
+        <a href="#">Services</a>
+        <a href="#">FAQs</a>
+        <a href="#">Contact Us</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <h2>Book Your Personalized Session in Minutes!</h2>
+      <p>Choose from a variety of sessions tailored to your needs.</p>
+      <button onclick="scrollToForm()">Book Now</button>
+    </div>
+  </section>
+
+  <!-- Session Information Section -->
+  <section class="session-grid container">
+    <div class="session-card">
+      <h3>Yoga Therapy</h3>
+      <p>Duration: 1 hour</p>
+      <p>Mentor</p>
+      <button onclick="promptDateTime()">View Details</button>
+    </div>
+    <div class="session-card">
+      <h3>Personal Tutoring</h3>
+      <p>Duration: 30 minutes</p>
+      <p>Price: $25</p>
+      <button onclick="promptDateTime()">View Details</button>
+    </div>
+    <div class="session-card">
+      <h3>Life Coaching</h3>
+      <p>Duration: 1 hour</p>
+      <p>Price: $80</p>
+      <button onclick="promptDateTime()">View Details</button>
+    </div>
+  </section>
+
+  <!-- Calendar Section -->
+  <section class="calendar-section container">
+    <h2>Select a Date and Time</h2>
+    <input type="date" id="session-date" onchange="validateDate()">
+    <input type="time" id="session-time">
+    <p id="date-error" style="color: red; display: none;">Please select a valid date.</p>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="testimonial-section container">
+    <h2>What Our Clients Say</h2>
+    <blockquote>
+      "The life coaching sessions have truly transformed my perspective!" - Jane Doe
+    </blockquote>
+    <blockquote>
+      "Yoga therapy helped me find balance and peace. Highly recommend!" - John Smith
+    </blockquote>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="faq-section container">
+    <h2>Frequently Asked Questions</h2>
+    <p><strong>How do I cancel my booking?</strong><br>You can cancel by logging into your account and navigating to your bookings.</p>
+    <p><strong>Can I reschedule?</strong><br>Yes, rescheduling is available up to 24 hours before the session.</p>
+  </section>
+
+  <!-- Footer Section -->
+  <footer>
+    <p>&copy; 2024 Book My Session. All Rights Reserved.</p>
+    <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+  </footer>
+
+  <script>
+    function scrollToForm() {
+      document.getElementById('booking-form').scrollIntoView({ behavior: 'smooth' });
+    }
+
+    function validateDate() {
+      const dateInput = document.getElementById('session-date');
+      const errorMsg = document.getElementById('date-error');
+      const selectedDate = new Date(dateInput.value);
+      const today = new Date();
+
+      if (selectedDate < today) {
+        errorMsg.style.display = 'block';
+        dateInput.style.borderColor = 'red';
+      } else {
+        errorMsg.style.display = 'none';
+        dateInput.style.borderColor = '#ddd';
+      }
+    }
+
+    function promptDateTime() {
+      const date = prompt("Please enter the date (YYYY-MM-DD):");
+      const time = prompt("Please enter the time (HH:MM):");
+      if (date && time) {
+        alert(`Session booked for ${date} at ${time}`);
+      } else {
+        alert("Booking was not completed.");
+      }
+    }
+  </script>
+
+</body>
+</html>
