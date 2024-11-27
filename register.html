@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Register</title>
+
+   <!-- font awesome cdn link  -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+
+   <!-- custom css file link  -->
+   <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+<style>
+   #registerForm .form-group input {
+    font-size:1.2rem; /* Increase font size of input fields */
+    border: 2px solid #ccc; /* Add border to highlight the box */
+    background-color: #f9f9f9; /* Slightly change the background color */
+    transition: border-color 0.3s ease; /* Smooth transition for border color */
+}
+
+#registerForm .form-group input:focus {
+    border-color: #f0a1e1; /* Change border color on focus */
+}
+
+/* Increase the font size of the labels for input fields */
+#registerForm .form-group label {
+    font-size: 1.5rem; /* Increase font size of labels */
+    color: var(--black); /* Ensure the color is consistent */
+    display: block; /* Ensure labels are displayed as block elements */
+    margin-bottom: 0.5rem; /* Add some space below the labels */
+}
+
+/* Style for the userType select field */
+#userType {
+    font-size: 1.2rem; /* Increase font size */
+    border: 2px solid #ccc; /* Add border to highlight the box */
+    background-color: #f9f9f9; /* Slightly change the background color */
+    transition: border-color 0.3s ease; /* Smooth transition for border color */
+    padding: 1rem; /* Add padding for better spacing */
+    border-radius: 0.5rem; /* Add border radius for rounded corners */
+    width: 100%; /* Make the select field full width */
+    margin: 1rem 0; /* Add margin for spacing */
+}
+
+/* Change border color on focus */
+#userType:focus {
+    border-color: #f0a1e1; /* Change border color on focus */
+}
+
+/* Style for the label of userType field */
+label[for="userType"] {
+    font-size: 1.5rem; /* Increase font size of labels */
+    color: var(--black); /* Ensure the color is consistent */
+    display: block; /* Ensure labels are displayed as block elements */
+    margin-bottom: 0.5rem; /* Add some space below the labels */
+}
+
+/* Style for the select fields */
+select.box {
+    font-size: 1.2rem; /* Increase font size */
+    border: 2px solid #ccc; /* Add border to highlight the box */
+    background-color: #f9f9f9; /* Slightly change the background color */
+    transition: border-color 0.3s ease; /* Smooth transition for border color */
+    padding: 1rem; /* Add padding for better spacing */
+    border-radius: 0.5rem; /* Add border radius for rounded corners */
+    width: 100%; /* Make the select field full width */
+    margin: 1rem 0; /* Add margin for spacing */
+}
+
+/* Change border color on focus */
+select.box:focus {
+    border-color: #f0a1e1; /* Change border color on focus */
+}
+
+/* Style for the labels */
+label {
+    font-size: 1.5rem; /* Increase font size of labels */
+    color: var(--black); /* Ensure the color is consistent */
+    display: block; /* Ensure labels are displayed as block elements */
+    margin-bottom: 0.5rem; /* Add some space below the labels */
+}
+
+/* Style for the location select field */
+#location {
+    font-size: 1.2rem; /* Increase font size */
+    border: 2px solid #ccc; /* Add border to highlight the box */
+    background-color: #f9f9f9; /* Slightly change the background color */
+    transition: border-color 0.3s ease; /* Smooth transition for border color */
+    padding: 1rem; /* Add padding for better spacing */
+    border-radius: 0.5rem; /* Add border radius for rounded corners */
+    width: 100%; /* Make the select field full width */
+    margin: 1rem 0; /* Add margin for spacing */
+}
+
+/* Change border color on focus */
+#location:focus {
+    border-color: #f0a1e1; /* Change border color on focus */
+}
+
+/* Style for the label of location field */
+label[for="location"] {
+    font-size: 1.5rem; /* Increase font size of labels */
+    color: var(--black); /* Ensure the color is consistent */
+    display: block; /* Ensure labels are displayed as block elements */
+    margin-bottom: 0.5rem; /* Add some space below the labels */
+}
+</style>
+<header class="header">
+   
+   <section class="flex">
+
+      <a href="home.html" class="logo">CONNECT4AUTISM</a>
+
+      <div class="icons">
+         <div id="menu-btn" class="fas fa-bars"></div>
+         <div id="search-btn" class="fas fa-search"></div>
+         <div id="user-btn" class="fas fa-user"></div>
+         <div id="toggle-btn" class="fas fa-sun"></div>
+      </div>
+      
+
+      <div class="profile">
+         <img src="images/pic-1.jpg" class="image" alt="">
+         <h3 class="name">shaikh anas</h3>
+         <p class="role">student</p>
+         <a href="profile.html" class="btn">view profile</a>
+         <div class="flex-btn">
+            <a href="login.html" class="option-btn">login</a>
+            <a href="register.html" class="option-btn">register</a>
+         </div>
+      </div>
+
+   </section>
+
+</header>   
+
+<div class="side-bar">
+
+   <div id="close-btn">
+      <i class="fas fa-times"></i>
+   </div>
+
+   <div class="profile">
+      <img src="images/pic-1.jpg" class="image" alt="">
+      <h3 class="name">shaikh anas</h3>
+      <p class="role">student</p>
+      <a href="profile.html" class="btn">view profile</a>
+   </div>
+
+   <nav class="navbar">
+      <a href="home.html"><i class="fas fa-home"></i><span>home</span></a>
+      <a href="about.html"><i class="fas fa-question"></i><span>about</span></a>
+      <a href="courses.html"><i class="fas fa-graduation-cap"></i><span>courses</span></a>
+      <a href="teachers.html"><i class="fas fa-chalkboard-user"></i><span>teachers</span></a>
+      <a href="contact.html"><i class="fas fa-headset"></i><span>contact us</span></a>
+   </nav>
+
+</div>
+
+<section class="form-container">
+
+   <form id="registerForm" action="/Nanni/design/Servlet/RegisterServlet.java" method="post">
+      <h3>Register</h3>
+      <div class="form-group">
+         <label for="username">Username</label>
+         <input type="text" id="username" name="username" required class="box">
+      </div>
+      <div class="form-group">
+         <label for="email">Email</label>
+         <input type="email" id="email" name="email" required class="box">
+      </div>
+      <div class="form-group">
+         <label for="password">Password</label>
+         <input type="password" id="password" name="password" required class="box">
+      </div>
+      <div class="form-group">
+         <label for="confirmPassword">Confirm Password</label>
+         <input type="password" id="confirmPassword" name="confirmPassword" required class="box">
+      </div>
+      <div class="form-group">
+         <label for="location">Location</label>
+         <select id="location" name="location" required class="box">
+            <option value="" disabled selected>Select your location</option>
+            <option value="Ambattur">Ambattur</option>
+            <option value="Avadi">Avadi</option>
+            <option value="Mogappair">Mogappair</option>
+            <!-- Add more locations as needed -->
+         </select>
+      </div>
+      <div class="form-group">
+         <label for="userType">User Type</label>
+         <select id="userType" name="userType" required class="box">
+            <option value="" disabled selected>Select your user type</option>
+            <option value="mentor">Mentor</option>
+            <option value="parent">Parent</option>
+         </select>
+      </div>
+      <button type="submit" class="btn">Register</button>
+   </form>
+
+</section>
+
+<footer class="footer">
+   <div class="footer-content">
+     <div class="footer-column">
+         
+       <div class="horizontal-menu">
+         <div class="menu-section">
+             <h3>Company</h3>
+             <ul>
+                 <li>About us</li>
+                 <li>Contact us</li>
+                 <li>Careers</li>
+                 <li>Press</li>
+             </ul>
+         </div>
+         <div class="menu-section">
+             <h3>Services</h3>
+             <ul>
+                 <li>Mentor support</li>
+                 <li>Community</li>
+                 <li>Resource Library</li>
+             </ul>
+         </div>
+         <div class="menu-section">
+             <h3>Legal</h3>
+             <ul>
+                 <li>Privacy Policy</li>
+                 <li>Terms & Conditions</li>
+                 <li>Return Policy</li>
+             </ul>
+         </div>
+         <div class="menu-section">
+             <h3>Contact us</h3>
+             <ul>
+                 <li>spectrum@gmail.com</li>
+                 <li>+91 86109 32372</li>
+             </ul>
+         </div>
+     </div>
+ </footer>
+
+<!-- custom js file link  -->
+<script src="js/script.js"></script>
+<script>
+   function submitForm(event) {
+      event.preventDefault(); // Prevent form from refreshing the page
+
+      const form = document.getElementById('registerForm');
+      const formData = new FormData(form);
+
+      const data = {
+         username: formData.get('username'),
+         email: formData.get('email'),
+         password: formData.get('password'),
+         confirmPassword: formData.get('confirmPassword'),
+         location: formData.get('location'),
+         userType: formData.get('userType'),
+      };
+
+      google.script.run
+         .withSuccessHandler(() => {
+            alert('Registration successful!');
+            form.reset();
+         })
+         .storeUserData(data);
+   }
+</script>
+</body>
+</html>

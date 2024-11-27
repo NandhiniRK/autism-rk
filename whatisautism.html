@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What is Autism Spectrum Disorder?</title>
+    <style>
+        /* General reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color:linear-gradient(135deg, #a3d7e0, #b4e4c9)
+        }
+
+        header {
+            background: #333;
+            color: #fff;
+            padding: 20px 40px;
+        }
+
+        .navbar {
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .navbar li {
+            margin: 0 15px;
+        }
+
+        .navbar a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1rem;
+        }
+
+        .btn {
+            background: #ff9900;
+            color: #fff;
+            padding: 7px 15px;
+            border-radius: 5px;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+        }
+
+        .content {
+            padding: 40px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .about-section {
+            margin-bottom: 40px;
+        }
+
+        .about-section h1 {
+            font-size: 2rem;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .about-section p {
+            font-size: 1rem;
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        .info-section {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .info-card {
+            text-align: center;
+            max-width: 350px;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            transition: transform 0.3s;
+        }
+
+        .info-card:hover {
+            transform: scale(1.05);
+        }
+
+        .info-card img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+
+        .info-card h3 a {
+            text-decoration: none;
+            color: #ff9900;
+            font-size: 1.1rem;
+            font-weight: bold;
+        }
+
+        footer {
+            background: #333;
+            color: #fff;
+            padding: 40px 20px;
+            margin-top: 40px;
+            text-align: center;
+        }
+
+        .footer-columns {
+            display: flex;
+            justify-content: space-around;
+            align-items: flex-start;
+            gap: 20px;
+            flex-wrap: wrap;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-columns div {
+            max-width: 300px;
+        }
+
+        .footer-columns h3 {
+            margin-bottom: 15px;
+            color: #ff9900;
+        }
+
+        .footer-columns ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-columns ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-columns ul li a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 0.9rem;
+        }
+
+        .footer-columns p {
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class="navbar">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="">Services</a></li>
+                <li><a href="parent_community.html">Community</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="login.html" class="btn">Sign in</a></li>
+                <li><a href="register.html" class="btn">Register</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="content">
+        <section id="about" class="about-section">
+            <h1>What is Autism Spectrum Disorder?</h1>
+            <p>
+                <bold>
+                Autism spectrum disorder (ASD) is a neurodevelopmental disorder defined by persistent deficits in social communication and social interaction, accompanied by restricted, repetitive patterns of behavior, interests, or activities.
+                The signs of ASD are usually evident in early childhood. Though it is still considered a lifelong diagnosis, with appropriate early intervention, individuals with ASD can lead productive, inclusive, and fulfilling lives.
+            </bold>
+        </p>
+               
+        </section>
+
+        <section class="info-section">
+            <div class="info-card">
+                <img src="images/boygirl.jpg" alt="Child with Parent">
+                <h3><a href="https://www.cdc.gov/ncbddd/actearly/autism/curriculum/documents/early-warning-signs-autism_508.pdf">Red Flags of ASD in Toddlers</a></h3>
+            </div>
+            <div class="info-card">
+                <img src="images/sd.jpg" alt="Child Reading">
+                <h3><a href="https://www.cdc.gov/autism/hcp/diagnosis/index.html">How is ASD Diagnosed?</a></h3>
+            </div>
+        </section>
+
+        
+    </main>
+
+    <footer>
+        <div class="footer-columns">
+            <div>
+                <h3>Company</h3>
+                <ul>
+                    <li><a href="about.html">About us</a></li>
+                    <li><a href="contact.html">Contact us</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3>Services</h3>
+                <ul>
+                    <li><a href="searchmentors.html">Mentor support</a></li>
+                    <li><a href="parent_community.html">Parent community</a></li>
+                    <li><a href="whatisautism.html">Resources</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3>Contact</h3>
+                <ul>
+                    <li><a href="mailto:poovendant@gmail.com">spectrum@gmail.com </a></li>
+                    <li> <a href="tel:1234567890">+91 86109 32372</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    
+</body>
+</html>

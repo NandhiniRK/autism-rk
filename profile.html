@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Profile</title>
+
+   <!-- font awesome cdn link  -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+
+   <!-- custom css file link  -->
+   <link rel="stylesheet" href="css/style.css">
+
+   <style>
+      body {
+         background-color: #F2CBAF; /* Set the background color to #A020F0 */
+         font-family: 'Nunito', sans-serif;
+         margin: 0;
+         padding: 0;
+      }
+
+      .header {
+         position: sticky;
+         top: 0;
+         left: 0;
+         right: 0;
+         background-color: var(--white);
+         z-index: 1000;
+         border-bottom: var(--border);
+         display: flex;
+         align-items: center;
+         justify-content: space-between;
+         padding: 1rem 2rem;
+      }
+
+      .header .flex {
+         display: flex;
+         align-items: center;
+         gap: 2rem;
+      }
+
+      .header .logo {
+         font-size: 2.8rem;
+         color: var(--black);
+         font-weight: 700;
+      }
+
+      .navbar {
+         display: flex;
+         gap: 2rem;
+      }
+
+      .navbar a {
+         text-decoration: none;
+         color: var(--black);
+         display: flex;
+         align-items: center;
+         gap: 0.5rem;
+         font-size: 1.6rem;
+         font-weight: 500;
+      }
+
+      .search-form {
+         display: flex;
+         align-items: center;
+         gap: 0.5rem;
+         padding: 0;
+         background: none;
+      }
+
+      .search-form input {
+         width: 20rem;
+         font-size: 1.6rem;
+         border: 1px solid var(--light-color);
+         border-radius: 0.5rem;
+         padding: 0.5rem;
+      }
+
+      .search-form button {
+         font-size: 1.6rem;
+         background: none;
+         border: none;
+         cursor: pointer;
+         color: var(--black);
+      }
+
+      .search-form button:hover {
+         color: var(--main-color);
+      }
+
+      .icons {
+         display: flex;
+         align-items: center;
+         gap: 1rem;
+         padding: 0;
+      }
+
+      .icons div {
+         font-size: 1.8rem;
+         color: var(--black);
+         background: none;
+         cursor: pointer;
+         text-align: center;
+      }
+
+      .icons div:hover {
+         color: var(--main-color);
+      }
+
+      .dashboard .container {
+         max-width: 1200px;
+         margin: 2rem auto;
+         background-color: var(--white);
+         padding: 2rem;
+         border-radius: 0.5rem;
+         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+
+      .dashboard h1 {
+         font-size: 2.5rem;
+         color: var(--black);
+         margin-bottom: 2rem;
+      }
+
+      .progress-bar {
+         margin-bottom: 2rem;
+      }
+
+      .progress-bar h2 {
+         font-size: 2rem;
+         color: var(--black);
+         margin-bottom: 1rem;
+      }
+
+      .progress {
+         width: 100%;
+         background-color: var(--light-bg);
+         border-radius: 0.5rem;
+         overflow: hidden;
+      }
+
+      .progress-value {
+         height: 1.5rem;
+         background-color: var(--main-color);
+      }
+
+      .child-profile-container {
+         background-color: var(--light-bg);
+         padding: 2rem;
+         border-radius: 0.5rem;
+         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+         margin-bottom: 2rem;
+      }
+
+      .child-profile-container h2 {
+         font-size: 2rem;
+         color: var(--black);
+         margin-bottom: 1rem;
+      }
+
+      .child-profile-container p {
+         font-size: 1.6rem;
+         color: var(--light-color);
+         margin-bottom: 0.5rem;
+      }
+
+      .session-icons {
+         display: flex;
+         gap: 2rem;
+         margin-bottom: 2rem;
+      }
+
+      .session-icons .icon {
+         display: flex;
+         align-items: center;
+         gap: 0.5rem;
+         font-size: 1.6rem;
+         color: var(--black);
+         text-decoration: none;
+         background-color: var(--light-bg);
+         padding: 1rem;
+         border-radius: 0.5rem;
+         transition: background-color 0.3s;
+      }
+
+      .session-icons .icon:hover {
+         background-color: var(--main-color);
+      }
+
+      .video-lessons {
+         margin-bottom: 2rem;
+      }
+
+      .video-lessons h2 {
+         font-size: 2rem;
+         color: var(--black);
+         margin-bottom: 1rem;
+      }
+
+      .video-lessons .lesson {
+         margin-bottom: 1rem;
+      }
+
+      .video-lessons .lesson a {
+         display: flex;
+         align-items: center;
+         gap: 0.5rem;
+         font-size: 1.6rem;
+         color: var(--black);
+         text-decoration: none;
+         background-color: var(--light-bg);
+         padding: 1rem;
+         border-radius: 0.5rem;
+         transition: background-color 0.3s;
+      }
+
+      .video-lessons .lesson a:hover {
+         background-color: var(--main-color);
+      }
+   </style>
+
+</head>
+<body>
+
+   <header class="header">
+      <section class="flex">
+         <a href="home.html" class="logo">CONNECT4AUTISM</a>
+         <nav class="navbar">
+            <a href="home.html"><i class="fas fa-home"></i><span>Home</span></a>
+            <a href="about.html"><i class="fas fa-question"></i><span>What is Autism?</span></a>
+            <a href="courses.html"><i class="fas fa-graduation-cap"></i><span>Services</span></a>
+            <a href="teachers.html"><i class="fas fa-chalkboard-user"></i><span>Community</span></a>
+            <a href="courses"><i class="fas fa-headset"></i><span>Resources</span></a>
+            <a href="contact.html"><i class="fas fa-headset"></i><span>Contact us</span></a>
+        </nav>
+         
+         <div class="icons">
+            <div id="menu-btn" class="fas fa-bars"></div>
+            <div id="search-btn" class="fas fa-search"></div>
+            <div id="user-btn" class="fas fa-user"></div>
+            <div id="toggle-btn" class="fas fa-sun"></div>
+         </div>
+         <div class="profile">
+            <img src="images/output.jpg" class="image" alt="">
+            <h3 class="name">Mathew</h3>
+            <p class="role">Parent</p>
+            <a href="profile.html" class="btn">view profile</a>
+            
+         </div>
+         <form action="search.html" method="post" class="search-form">
+            <input type="text" name="search_box" required placeholder="Search mentors" maxlength="100">
+            <button type="submit" class="fas fa-search"></button>
+         </form>
+      </section>
+   </header> 
+   
+
+   <section class="dashboard">
+      <div class="container welcome-container">
+         <h1>Welcome back, Aashish Mathew!</h1>
+         <p>Ready to continue Dua’s journey on Spectrum?</p>
+      </div>
+      <hr class="section-divider">
+      <div class="progress-bar">
+         <h2>Progress</h2>
+         <div class="progress">
+            <div class="progress-value" style="width: 70%;"></div>
+         </div>
+      </div>
+      <hr class="section-divider">
+      <div class="child-profile-container">
+         <div class="child-profile"></div>
+         <h2>Child Profile Status</h2>
+         <p>Name: John Doe</p>
+         <p>Age: 10</p>
+         <p>Mentor : Ifa</p>
+      </div>
+      <hr class="section-divider">
+      <a href="book-session.html" class="icon" style="font-size: 2.5rem; padding: 6rem 6rem; background-color: #c1e4c2; display: flex; flex-direction: column; align-items: center;">
+         <i class="fas fa-calendar-plus" style="font-size: 4rem; color: #4CAF50;"></i> <!-- Changed icon color to #4CAF50 -->
+         <span style="margin-top: 1rem; color: #000000;">Book a Session</span> <!-- Changed label color to #4CAF50 -->
+      </a>
+      <hr class="section-divider">
+      <div class="video-lessons">
+         <h2>Video Lessons</h2>
+         <div class="lessons-container">
+            <div class="lesson">
+               <a href="https://www.youtube.com/watch?v=T9j6rQ4rtQY">
+                  <img src="images/sensor.jpg" alt="">
+                  <span><h1>Week 1 : Sensory room</h1></span>
+               </a>
+            </div>
+            <div class="lesson">
+               <a href="https://www.youtube.com/watch?v=CuhUZM62vjY&list=PLZARf4n19ULl6vFOcLBciH6qFcq7C4hHS&index=4">
+                  <img src="images/alphabets.jpg" alt="">
+                  <span><h1>Week 2 : Alphabets</h1></span>
+               </a>
+            </div>
+            <div class="lesson">
+               <a href="#">
+                  <img src="images/comss.jpg" alt="">
+                  <span><h1>Week 3 : Communication</h1></span>
+               </a>
+            </div>
+         </div>
+      </div>
+      <hr class="section-divider">
+   </section>
+
+<!-- custom js file link  -->
+<script src="js/script.js"></script>
+
+</body>
+</html>

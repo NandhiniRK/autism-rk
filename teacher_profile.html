@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Mentor Profile</title>
+
+   <!-- font awesome cdn link  -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+
+   <!-- custom css file link  -->
+   <link rel="stylesheet" href="css/style.css">
+
+   <style>
+       /* General reset */
+       * {
+           margin: 0;
+           padding: 0;
+           box-sizing: border-box;
+       }
+
+       body {
+           font-family: arial, sans-serif;
+           line-height: 1.6;
+           color: #333;
+           background-color: #f9f4c9;
+           font-size:x-large;
+       }
+
+       header {
+           background: #333;
+           color: #fff;
+           padding: 20px 40px;
+       }
+
+       .navbar {
+           list-style: none;
+           display: flex;
+           justify-content: space-between;
+           align-items: center;
+           max-width: 1200px;
+           margin: 0 auto;
+       }
+
+       .navbar li {
+           margin: 0 15px;
+       }
+
+       .navbar a {
+           color: #fff;
+           text-decoration: none;
+           font-size: 2rem;
+       }
+
+       .btn {
+           background: #ff9900;
+           color: #fff;
+           padding: 7px 15px;
+           border-radius: 5px;
+           text-transform: uppercase;
+           font-size: x-large;
+               }
+
+       .content {
+           padding: 40px 20px;
+           max-width: 1200px;
+           margin: 0 auto;
+           text-align: left;
+       }
+
+       /* .profile-container {
+           text-align: left;
+           max-width: 100%;
+           margin: 0;
+           padding: 0;
+           background-color: #fff;
+           box-shadow: none;
+           border-radius: 0;
+       }
+
+       .profile-container img {
+           width: 150px;
+           height: 150px;
+           border-radius: 50%;
+           margin-bottom: 15px;
+       } */
+
+       /* .profile-container h2 {
+           font-size: rem;
+           margin-bottom: 15px;
+       }
+
+       .profile-container p {
+           font-size: 2rem;
+           margin-bottom: 10px;
+       } */
+
+       footer {
+           background: #333;
+           color: #fff;
+           padding: 40px 20px;
+           margin-top: 40px;
+           text-align: center;
+       }
+
+       .footer-columns {
+           display: flex;
+           justify-content: space-around;
+           align-items: flex-start;
+           gap: 20px;
+           flex-wrap: wrap;
+           max-width: 1200px;
+           margin: 0 auto;
+       }
+
+       .footer-columns div {
+           max-width: 300px;
+       }
+
+       .footer-columns h3 {
+           margin-bottom: 15px;
+           color: #ff9900;
+       }
+
+       .footer-columns ul {
+           list-style: none;
+           padding: 0;
+       }
+
+       .footer-columns ul li {
+           margin-bottom: 10px;
+       }
+
+       .footer-columns ul li a {
+           text-decoration: none;
+           color: #fff;
+           font-size: 2rem;
+       }
+
+       .footer-columns p {
+           font-size: 1.5rem;
+       }
+   </style>
+</head>
+<body>
+
+<header>
+    <nav>
+        <ul class="navbar">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="parent_community.html">Community</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="login.html" class="btn">Sign in</a></li>
+            <li><a href="register.html" class="btn">Register</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main class="content">
+    <section class="profile-container">
+        <img id="mentor-picture" src="" alt="Mentor Picture">
+        <h2 id="mentor-name"></h2>
+        <p id="mentor-location"></p>
+        <p id="mentor-expertise"></p>
+        <p id="mentor-contact"></p>
+    </section>
+</main>
+
+<footer>
+    <div class="footer-columns">
+        <div>
+            <h3>Company</h3>
+            <ul>
+                <li><a href="about.html">About us</a></li>
+                <li><a href="contact.html">Contact us</a></li>
+            </ul>
+        </div>
+        <div>
+            <h3>Services</h3>
+            <ul>
+                <li><a href="searchmentors.html">Mentor support</a></li>
+                <li><a href="parent_community.html">Parent community</a></li>
+                <li><a href="whatisautism.html">Resources</a></li>
+            </ul>
+        </div>
+        <div>
+            <h3>Contact</h3>
+            <ul>
+                <li><a href="mailto:spectrum@gmail.com">spectrum@gmail.com</a></li>
+                <li><a href="tel:+918610932372">+91 86109 32372</a></li>
+            </ul>
+        </div>
+    </div>
+</footer>
+
+<!-- custom js file link  -->
+<script src="js/script.js"></script>
+<script>
+    // Example mentor data
+    const mentorData = {
+        name: "John Doe",
+        picture: "images/mentor.jpg",
+        location: "New York, USA",
+        expertise: "Autism Specialist",
+        contact: "john.doe@example.com"
+    };
+
+    // Populate mentor profile
+    document.getElementById('mentor-name').textContent = mentorData.name;
+    document.getElementById('mentor-picture').src = mentorData.picture;
+    document.getElementById('mentor-location').textContent = `Location: ${mentorData.location}`;
+    document.getElementById('mentor-expertise').textContent = `Expertise: ${mentorData.expertise}`;
+    document.getElementById('mentor-contact').textContent = `Contact: ${mentorData.contact}`;
+</script>
+
+</body>
+</html>

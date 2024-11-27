@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Find Your Mentor</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Garamond, sans-serif;
+      background-color: #f9f9f9;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-image: url('https://i.pinimg.com/736x/c3/c0/b0/c3c0b08003cba75d0e5de74c9c9db8e4.jpg');
+    }
+
+    .container {
+      width: 80%;
+      max-width: 1200px;
+      background-color: #ffffff;
+      display: flex;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      border-radius: 8px;
+      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    }
+
+    .image-section {
+      flex: 1;
+      background-image: url('https://i.pinimg.com/736x/c3/c0/b0/c3c0b08003cba75d0e5de74c9c9db8e4.jpg');
+      background-size: cover;
+      background-position: center;
+    }
+
+    .form-section {
+      flex: 2;
+      padding: 40px;
+    }
+
+    .form-section h1 {
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+
+    .form-section p {
+      color: #666;
+      margin-bottom: 30px;
+    }
+
+    .form {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .form input, .form select {
+      flex: 1;
+      padding: 10px;
+      font-size: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    .form button {
+      background-color: #4a90e2;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      font-size: 1rem;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+
+    .form button:hover {
+      background-color: #357abd;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="image-section"></div>
+    <div class="form-section">
+      <h1>Let us find your mentor.</h1>
+      <p>Whether you know what you need or aren’t sure where to start, we’ll help you find the right fit.</p>
+      <form class="form">
+        <select>
+          <option value="" disabled selected>Where do you live?</option>
+          <option value="location1">Ambattur</option>
+          <option value="location2">Avadi</option>
+          <option value="location3">Mogappair</option>
+        </select>
+        <button type="submit">Find</button>
+      </form>
+    </div>
+  </div>
+</body>
+</html>
