@@ -1,5 +1,5 @@
 const mongoose=require("mongoose");
-mongoose.connect("mongodb+srv://melvin:melvin0011@cluster0.do87x1x.mongodb.net/artism");
+mongoose.connect();
 
 // Define the User schema
 const userSchema = new mongoose.Schema({
